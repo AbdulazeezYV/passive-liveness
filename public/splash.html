@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/fabric-9.6.1.min.css">
+  <script type="module" src="https://unpkg.com/@fluentui/web-components@2.0.0" integrity="sha512-wyYWUoZ8xBnVgKl15H3yF8GUSVSs45CMvJDjl3o3tHX/I403ECl1pEbsgva+gQ/1CZTM9NIKLzvg6uaAzo9ZXg=="></script>
+  <style>
+    body {
+      min-height: 100vh;
+      padding: 10px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #46B2C8, #35A1B4);
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 420px;
+      padding: 30px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container img {
+      height: 80px;
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #0078d4;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #6e6e6e;
+      margin-bottom: 1.75rem;
+    }
+
+    .card {
+      background-color: #f4f7fa;
+      border: none;
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: left;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .tips-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: #0078d4;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .card li {
+      margin-bottom: 0.85rem;
+      padding-left: 1.75rem;
+      position: relative;
+    }
+
+    .card li:before {
+      content: "•";
+      color: #0078d4;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: -4px;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        max-width: 95%;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .description {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./liveness.svg" alt="Verification">
+    <div class="title">Prepare for Your Face Verification</div>
+    <div class="description">Follow these steps to ensure a smooth verification process.</div>
+    <div class="card">
+      <div class="tips-title">Tips</div>
+      <ul>
+        <li>Set your screen brightness to maximum for better visibility.</li>
+        <li>Ensure you're in a well-lit environment, but avoid direct sunlight.</li>
+        <li>In <q>Passive</q>, avoid overly bright areas.</li>
+        <li>Avoid wearing masks, hats, or dark sunglasses.</li>
+        <li>Keep your face centered within the camera frame.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
