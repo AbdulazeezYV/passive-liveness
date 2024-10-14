@@ -79,6 +79,11 @@ async function startFaceLiveness(authToken: string) {
               azureAIVisionFaceAnalyzer.value!.LivenessFailureReason[
                 faceAnalyzedResult.value.livenessResult.failureReason
               ].replace(/([A-Z])/g, ' $1').trim().replace(/\b\w/g, (char:string) => char.toUpperCase())}`
+            if (azureAIVisionFaceAnalyzer.value!.LivenessFailureReason[
+                faceAnalyzedResult.value.livenessResult.failureReason
+              ] === "EnvironmentNotSupported"){
+                livenessText = "Failed, Kindly Increase your phone/laptop brightness and retry."
+              }
           }
 
           let recognitionCondition;
